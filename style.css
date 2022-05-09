@@ -1,0 +1,338 @@
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+body{
+    background-color:rgb(237, 230, 241);
+    margin: 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.font{
+    font-family: 'Nunito Sans';
+}
+.marginZero{
+    margin: 0;
+}
+.borderBox{
+    box-sizing: border-box;
+}
+.textBackgroundLightColor{
+    background-color: #0c354b;
+    height: 2.5rem;
+    color: white;
+}
+.contentSquare{
+    align-items: flex-end !important;
+    height: 225px;
+    width: 350px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: scale(1);
+    transition: transform .4s;
+}
+.contentIMG{
+    height: 120px;
+    width: 120px;
+}
+.description{
+    font-size: 0.75em;
+    color:gray;
+}
+.regForm{
+    margin: 0.25rem 0.25rem 0.5rem 0.25rem;
+    border: solid 1px #0c354b;
+    border-radius: 5px;
+}
+#registerForm{
+    width:50%;
+}
+.regButton{
+    background-color:#0c354b;
+    width: 8rem;
+    font-weight: 600;
+    color:white
+}
+.boxFont{
+    box-sizing: border-box;
+}
+.margin05TB{
+    margin: 0.5rem 0;
+}
+.welcome{
+    font-size: 1.5rem;
+}
+.textCenter{
+    text-align: center;
+}
+.width{
+    width: 100%;
+}
+.paddingZero{
+    padding: 0;
+}
+.logOption{
+    margin:0.25rem;
+    text-decoration: none;
+    color: black;
+}
+.buttonsBorder{
+    border-right: solid 5px #365b6d;
+    border-left: solid 5px #365b6d;
+    border-bottom: solid 5px #365b6d;
+    border-radius: 0 0 30px 30px;
+    margin-right: 8rem;
+}
+#registerButton:hover{
+    cursor: pointer;
+}
+#loginTxt:hover{
+    cursor: default;
+}
+#registerLink{
+    font-size: 0.8rem;
+    color: #0c354b;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+#registerLink:hover{
+    cursor: pointer;
+}
+#logInLink:hover{
+    cursor: pointer;
+}
+#username:focus{
+    outline: solid 2px #365b6d;
+}
+#password:focus{
+    outline: solid 2px #365b6d;
+}
+#logo{
+    margin: 0 1rem 0 8rem;
+    color: #365b6d;
+    width: 70px;
+    height: 70px;
+    padding-right: 130px;
+}
+#logo:hover{
+    cursor: pointer;
+}
+#navbar {
+    justify-content:space-between;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    margin-bottom: 0.5rem;
+    margin-top: -2px;
+}
+.basketWidth{
+    width: 3rem;
+}
+.buttonIMG {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+.button{
+    padding: 0.5rem 0;
+    max-width: 65px;
+}
+.navButtonMargin{
+    margin-right: 1rem;
+}
+#logReg{
+    margin: 0 1rem;
+}
+#logRegPopup{
+    max-width: 250px;
+    background-color: white;
+    border: solid 3px #365b6d;
+    border-radius: 8px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 50;
+    padding: 5px;
+    top:65px;
+}
+#noAccTxt{
+    font-size:0.75rem;
+    color:gray;
+    margin: 5px 0;
+}
+.marginForm{
+    margin: 0.5rem;
+}
+.search{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    height: 2rem;
+    border-radius: 0.35rem;
+}
+#searchBar{ 
+    width: 35%;
+}
+#searchButton{
+    padding: 0.3rem 0.75rem;
+    background-color:#365b6d;
+    margin-left: -15px;
+}
+#searchInput{
+    border: solid 1px #365b6d;
+    padding-right: 20px;
+    padding-left: 5px;
+}
+.width80{
+    width: 80%;
+}
+#filterBox{
+    width:170px;
+    align-items: flex-start !important;
+}
+.yAxisSpaceBetween{
+    justify-content: space-between;
+}
+.itemBar{
+    padding: 0.1rem;
+    align-content: space-between;
+}
+.itemBar:hover{
+    padding: 0.1rem;
+    background-image:
+        linear-gradient(to bottom, white 0%, white 100%),
+        linear-gradient(to bottom, #365b6d 0%, #365b6d 100%);
+    background-clip: content-box, padding-box;
+}
+.itemName{
+    font-size: 1.2rem;
+    padding: 0.6rem 0 0 0.75rem;
+}
+.radiusLowerCorners{
+    border-radius: 0 0 7px 7px;
+}
+.itemInfo{
+    font-size: 0.85rem;
+    color: rgb(97, 95, 95);
+    padding-left: 0.75rem;
+}
+.itemLevel{
+    font-size: 0.65rem;
+    color: rgb(153, 153, 153);
+    padding: 0.1rem 0 0.6rem 0.75rem;
+}
+#filterList{
+    align-self: flex-start;
+    width: 150px;
+    padding: 0.35rem;
+}
+.filterBar{
+    justify-content: flex-start;
+    padding: 0 0.25rem 0.25rem 0.25rem;
+}
+.margin05Bottom{
+    margin-bottom: 0.5rem;
+}
+.contentTitle{
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-bottom: solid 1px #0c354b;
+}
+.border1pxRadius{
+    border: solid 1px #0c354b;
+    border-radius: 10px;
+}
+.checkbox{
+    height: 15px;
+    width: 15px;
+    /* transition: box-shadow .3s; */
+    /* background: white; */
+    cursor: pointer;
+    /* appearance: none; -webkit-appearance: none; */
+    border-radius: 3px !important;
+}
+/* .checkbox:checked{
+    box-shadow: inset 0 0 0 20px #0c354b;
+} */
+.filterName{
+    padding-left: 0.25rem;
+}
+.filterInfo{
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+}
+.itemIMG{
+    border: solid 2px gray;
+    width:9rem;
+    margin-right: 2.5rem;
+    position: relative;
+    transform: scale(1);
+    transition: transform .4s;
+}
+.itemIMG:hover {
+    z-index: 10;
+    transform: scale(1.75);
+}
+#contentGrid{
+    width: 75%;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.toLeft{
+    justify-content: flex-start;
+}
+.margin2{
+    margin: 2rem;
+}
+.whiteBackground{
+    background-color: white;
+}
+.contentSquare:hover{
+	transform: scale(1.1);
+    transition: transform .4s;
+}
+#footer{
+    border-top: solid 1px #0c354b;
+    justify-content: center;
+}
+#footer>*>*{
+    margin:0.5em;
+}
+#footerInfo{
+    border-right: solid 1px #0c354b;
+    width: 63%;
+}
+.marginNewsletter{
+    margin:0.35rem;
+}
+#submitNews{
+    font-weight: 500;
+    color:white;
+    border: none;
+    background-color: #365b6d;
+    padding: 0.3em;
+    width: 5em;
+    border-radius: 5px;
+}
+#saveToNews{
+    padding: 0.2em 0.4em;
+}
+#credits{
+    padding: 0.2rem;
+    background-color: #0c354b;
+}
+#author{
+    text-decoration: none;
+    margin: 0.25rem;
+    font-size: 0.5rem;
+    color: white;
+}
+#author:hover{
+    cursor: pointer;
+}
+#name{
+    border: solid 1px white;
+    border-radius: 4px;
+    padding: 0.2rem;
+}
