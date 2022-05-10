@@ -50,7 +50,7 @@ const categoryData = [
         img: "https://cdn4.iconfinder.com/data/icons/planning-14/64/planner_notebook_agenda_planning_notes_plan_organizer_-512.png",
     },
 ];
-const exercisesData = [
+const exercisesInfo = [
     {
         name: "dane osobowe",
         type: "zadanie typu ....",
@@ -104,6 +104,98 @@ const exercisesData = [
         type: "zadanie typu ....",
         group: "zdrowie",
         level: "A2",
+    },
+];
+const exercisesData = [
+    {
+        part1: "Holland is also known",
+        correct1: "as",
+        part2: "the Netherlands.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: " You can't take part in the elections",
+        correct1: "unless",
+        part2: "you are a citizen of Poland.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "Even",
+        correct1: "though",
+        part2: "we don't like her, I really think we should",
+        correct2: "help",
+        part3: "her in",
+        correct3: "this",
+        part4: "situation.",
+    },
+    {
+        part1: "The fact he knows the boss is",
+        correct1: "neither",
+        part2: "here nor there. He won't get the job.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "Only adults are",
+        correct1: "allowed",
+        part2: "to enter and as I can see you aren't old",
+        correct2: "enough",
+        part3: ".",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "Of course I'll forgive him. After",
+        correct1: "all",
+        part2: "we're only humans. We do make mistakes.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "I don't know if they all go to the party. I will, at",
+        correct1: "any",
+        part2: "rate.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: " I don't like your new car. I really prefered the previous",
+        correct1: "one",
+        part2: ".",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "Don't tell me lies. What you said doesn't",
+        correct1: "make",
+        part2: "any sense.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        part1: "Monica has",
+        correct1: "such",
+        part2: "a beautiful son. She must be really happy.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
     },
 ];
 
@@ -309,7 +401,7 @@ function categoriesOfExercises(data){
     
             let contentDiv = document.querySelector('#content');
                 contentDiv.classList.remove('yAxisSpaceBetween');
-                contentDiv.classList.remove('width80');
+                contentDiv.classList.remove('width');
                 contentDiv.innerText = ' ';
     
                 let categoryTitle = document.createElement('p');
@@ -318,7 +410,7 @@ function categoriesOfExercises(data){
                     categoryTitle.classList.add('welcome');
                     categoryTitle.classList.add('width');
                     categoryTitle.classList.add('marginZero');
-                    categoryTitle.innerText = 'Welcome in Aga English School!';
+                    categoryTitle.innerText = 'Welcome in RightWay English!';
 
                 let categorySubTitle = document.createElement('p');
                     categorySubTitle.classList.add('textCenter');
@@ -340,7 +432,7 @@ function categoriesOfExercises(data){
                         categoryBar.classList.add('flex');
                         categoryBar.classList.add('wrap');
                         categoryBar.classList.add('font');
-                        categoryBar.setAttribute('onclick','getExercisesTitle(event, exercisesData)');
+                        categoryBar.setAttribute('onclick','getExercisesTitle(event, exercisesInfo)');
                     
                         let categoryImg = document.createElement('img');
                             categoryImg.classList.add('contentIMG');
@@ -353,6 +445,7 @@ function categoriesOfExercises(data){
                             categoryInfo.classList.add('marginZero');
                             categoryInfo.classList.add('width');
                             categoryInfo.classList.add('radiusLowerCorners');
+                            categoryInfo.classList.add('contentBox');
                             categoryInfo.innerText = item.name;
     
     content.append(categoryTitle);
@@ -383,20 +476,20 @@ let content = document.querySelector('#content');
     content.classList.add('yAxisSpaceBetween');
 
     let filterBox = document.createElement('div');
-    filterBox.classList.add('flex');
-    filterBox.setAttribute('id','filterBox');
+        filterBox.classList.add('flex');
+        filterBox.setAttribute('id','filterBox');
 
         let filterList = document.createElement('div');
-        filterList.classList.add('font');
-        filterList.classList.add('border1pxRadius');
-        filterList.classList.add('whiteBackground');
-        filterList.setAttribute('id','filterList');
+            filterList.classList.add('font');
+            filterList.classList.add('border1pxRadius');
+            filterList.classList.add('whiteBackground');
+            filterList.setAttribute('id','filterList');
 
             let filterInfo = document.createElement('div');
-            filterInfo.classList.add('width');
-            filterInfo.classList.add('textCenter');
-            filterInfo.classList.add('filterInfo');
-            filterInfo.innerText = "Wybierz filtry";
+                filterInfo.classList.add('width');
+                filterInfo.classList.add('textCenter');
+                filterInfo.classList.add('filterInfo');
+                filterInfo.innerText = "Wybierz filtry";
 
 content.append(filterBox);
     filterBox.append(filterList);
@@ -412,13 +505,15 @@ content.append(filterBox);
             let filterLabel = document.createElement('label');
                 filterLabel.setAttribute('for', item.group);
                 filterLabel.classList.add('filterName');
+                filterLabel.classList.add('flex');
+                filterLabel.classList.add('wrap');
 
                 let filterCheck = document.createElement('input');
                     filterCheck.setAttribute('type','checkbox');
                     filterCheck.classList.add('border1pxRadius');
                     filterCheck.classList.add('checkbox');
                     filterCheck.setAttribute('id', item.group);
-                    filterCheck.setAttribute('onclick','filter(event, filterData, exercisesData)');
+                    filterCheck.setAttribute('onclick','filter(event, filterData, exercisesInfo)');
                 
                 let filterName = document.createElement('span');
                     filterName.classList.add('marginForm');
@@ -445,55 +540,192 @@ function exercises(data){
 if(document.querySelector('#itemList')){
     document.querySelector('#itemList').remove();
 }
+let content = document.querySelector('#content');
 
+let exercisesList = document.createElement('div');
+    exercisesList.classList.add('flex');
+    exercisesList.classList.add('wrap');
+    exercisesList.classList.add('width80');
+    exercisesList.setAttribute('id','itemList');
 
-let itemList = document.createElement('div');
-itemList.classList.add('flex');
-itemList.classList.add('wrap');
-itemList.classList.add('width80');
-itemList.setAttribute('id','itemList');
-
-content.append(itemList);
+content.append(exercisesList);
     // itemList.append(contentTitle);
 
     data.map(item=>{
     
-    let itemBar = document.createElement('div');
-    itemBar.classList.add('itemBar');
-    itemBar.classList.add('font');
-    itemBar.classList.add('wrap');
-    itemBar.classList.add('flex');
-    itemBar.classList.add('margin05Bottom');
-    itemBar.classList.add('width');
-    itemBar.classList.add('border1pxRadius');
-    itemBar.classList.add('whiteBackground');
-    
-        let itemName = document.createElement('div');
-        itemName.classList.add('itemName');
-        itemName.classList.add('boxFont');
-        itemName.classList.add('width');
-        itemName.innerText = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+    let exerciseBar = document.createElement('div');
+        exerciseBar.classList.add('itemBar');
+        exerciseBar.classList.add('font');
+        exerciseBar.classList.add('wrap');
+        exerciseBar.classList.add('flex');
+        exerciseBar.classList.add('margin05Bottom');
+        exerciseBar.classList.add('width');
+        exerciseBar.classList.add('border1pxRadius');
+        exerciseBar.classList.add('whiteBackground');
+        exerciseBar.setAttribute('onclick','loadExercise(exercisesData)');
         
-        let itemInfo = document.createElement('div');
-        itemInfo.classList.add('itemInfo');
-        itemInfo.classList.add('boxFont');
-        itemInfo.classList.add('width');
-        itemInfo.innerText = item.type.charAt(0).toUpperCase() + item.type.slice(1);
+        let exerciseName = document.createElement('div');
+            exerciseName.classList.add('itemName');
+            exerciseName.classList.add('boxFont');
+            exerciseName.classList.add('width');
+            exerciseName.innerText = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+        
+        let exerciseInfo = document.createElement('div');
+            exerciseInfo.classList.add('itemInfo');
+            exerciseInfo.classList.add('boxFont');
+            exerciseInfo.classList.add('width');
+            exerciseInfo.innerText = item.type.charAt(0).toUpperCase() + item.type.slice(1);
 
-        let itemLevel = document.createElement('div');
-        itemLevel.classList.add('itemLevel');
-        itemLevel.classList.add('boxFont');
-        itemLevel.classList.add('width');
-        itemLevel.innerText = `Poziom zadania: ${item.level.charAt(0).toUpperCase()}${item.level.slice(1)}`;
+        let exerciseLevel = document.createElement('div');
+            exerciseLevel.classList.add('itemLevel');
+            exerciseLevel.classList.add('boxFont');
+            exerciseLevel.classList.add('width');
+            exerciseLevel.innerText = `Poziom zadania: ${item.level.charAt(0).toUpperCase()}${item.level.slice(1)}`;
 
 
-    itemList.append(itemBar);
-        itemBar.append(itemName);
-        itemBar.append(itemInfo);
-        itemBar.append(itemLevel);
+    itemList.append(exerciseBar);
+        exerciseBar.append(exerciseName);
+        exerciseBar.append(exerciseInfo);
+        exerciseBar.append(exerciseLevel);
         }
     )
 };
+
+function loadExercise(data){
+let content = document.querySelector('#content');
+    content.classList.remove('yAxisSpaceBetween');
+    content.innerText = ``;
+
+    let exercisesToDo = document.createElement('div');
+        exercisesToDo.classList.add('boxFont');
+        exercisesToDo.classList.add('width80');
+        exercisesToDo.classList.add('borderTop');
+
+content.append(exercisesToDo);
+
+        data.map((item, key) => {
+
+            let exercise = document.createElement('div');
+                exercise.classList.add('font');
+                exercise.classList.add('width');
+                exercise.classList.add('padding');
+                exercise.classList.add('borderBottom');
+                exercise.setAttribute('id', key);
+
+                exercisesToDo.append(exercise);
+
+                let part1 = document.createElement('span');
+                    part1.innerText = `${item.part1} `;
+
+                    exercise.append(part1);
+                    
+                let correct1 = document.createElement('input');
+                    correct1.classList.add('inlineBlock');
+                    correct1.classList.add('wordInput');
+                    correct1.classList.add('transition1sBackgroundColor');
+                    correct1.setAttribute('id',`correct${key}1`);
+
+                    exercise.append(correct1);
+
+                let part2 = document.createElement('span');
+                    part2.innerText = `${item.part2} `;
+
+                    exercise.append(part2);
+
+                if(item.part3){
+
+                    let correct2 = document.createElement('input');
+                        correct2.classList.add('wordInput');
+                        correct2.classList.add('inlineBlock');
+                        correct2.setAttribute('id',`correct${key}2`);
+
+                    let part3 = document.createElement('span');
+                        part3.innerText = `${item.part3} `;
+
+                    exercise.append(correct2);
+                    exercise.append(part3);
+
+
+                } if(item.part4){
+
+                    let correct3 = document.createElement('input');
+                        correct3.classList.add('wordInput');
+                        correct3.classList.add('inlineBlock');
+                        correct3.setAttribute('id',`correct${key}3`);
+
+                    let part4 = document.createElement('span');
+                        part4.innerText = `${item.part4} `;
+
+                    exercise.append(correct3);
+                    exercise.append(part4);
+
+                }
+                let answersBar = document.createElement('div');
+                    answersBar.classList.add('width');
+                    answersBar.classList.add('flex');
+                    answersBar.classList.add('font');
+                    answersBar.classList.add('height');
+                    
+                    let answerTxt = document.createElement('span');
+                        answerTxt.classList.add('font');
+                        answerTxt.classList.add('answerTxtPadding');
+                        answerTxt.innerText = `Answers: `;
+
+                    let answers = document.createElement('span');
+                        answers.classList.add('hidden');
+                        answers.classList.add('font');
+                        answers.classList.add('transition1sVisibility');
+                        answers.setAttribute('id',`answers${key}`);
+                        const answersArray = [];
+                        if(item.correct1){answersArray.push(item.correct1)};
+                        if(item.correct2){answersArray.push(item.correct2)};
+                        if(item.correct3){answersArray.push(item.correct3)};
+                        const answersString = answersArray.join(', ');
+                        answers.innerText = answersString;
+
+                let buttons = document.createElement('div');
+                    buttons.classList.add('padding');
+                    buttons.classList.add('width');
+                    buttons.classList.add('font');
+                
+                    let check = document.createElement('button');
+                        check.classList.add('padding');
+                        check.classList.add('inlineBlock');
+                        check.classList.add('checkButton');
+                        check.innerText = `Check`;
+                        check.onclick = ()=>{
+                            if(document.getElementById(`correct${key}1`).value.toLowerCase() === document.getElementById(`answers${key}`).innerText.toLowerCase()){
+                                document.getElementById(`correct${key}1`).classList.remove('wrongAnswer');
+                                document.getElementById(`correct${key}1`).classList.add('goodAnswer');
+                            } else {
+                                document.getElementById(`correct${key}1`).classList.remove('goodAnswer');
+                                document.getElementById(`correct${key}1`).classList.add('wrongAnswer');
+                        }
+                        }
+
+                        
+                    let showCorrectAnswers = document.createElement('button');
+                        showCorrectAnswers.classList.add('padding');
+                        showCorrectAnswers.classList.add('showButton');
+                        showCorrectAnswers.classList.add('inlineBlock');
+                        showCorrectAnswers.innerText = `Show`;
+                        showCorrectAnswers.onclick = ()=>{
+                            document.getElementById(`answers${key}`).classList.remove('hidden');
+                        }
+
+
+                    exercise.append(answersBar);
+                        answersBar.append(answerTxt);
+                        answersBar.append(answers);
+                    exercise.append(buttons);
+                        buttons.append(check);
+                        buttons.append(showCorrectAnswers);
+                
+
+        }
+    )
+
+}
 
 
 function filter(e, filters, categories){
@@ -517,6 +749,7 @@ function filter(e, filters, categories){
 
 function registerGenerate(){ 
     let content = document.querySelector('#content');
+        content.classList.remove('yAxisSpaceBetween');
         content.innerText = ' ';
 
     let registerTxt = document.createElement('h1');

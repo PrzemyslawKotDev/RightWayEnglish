@@ -1,3 +1,4 @@
+/* style dla html wyłączają reskalowanie przy pasku przewijania strony */
 html {
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
@@ -25,7 +26,7 @@ body{
 }
 .textBackgroundLightColor{
     background-color: #0c354b;
-    height: 2.5rem;
+    height: 2.5em;
     color: white;
 }
 .contentSquare{
@@ -55,18 +56,21 @@ body{
 }
 .regButton{
     background-color:#0c354b;
-    width: 8rem;
+    width: 8em;
     font-weight: 600;
     color:white
+}
+.inlineBlock{
+    display: inline-block;
 }
 .boxFont{
     box-sizing: border-box;
 }
 .margin05TB{
-    margin: 0.5rem 0;
+    margin: 0.5em 0;
 }
 .welcome{
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 .textCenter{
     text-align: center;
@@ -77,8 +81,11 @@ body{
 .paddingZero{
     padding: 0;
 }
+.padding{
+    padding: 0.5em;
+}
 .logOption{
-    margin:0.25rem;
+    margin:0.25em;
     text-decoration: none;
     color: black;
 }
@@ -96,7 +103,7 @@ body{
     cursor: default;
 }
 #registerLink{
-    font-size: 0.8rem;
+    font-size: 0.8em;
     color: #0c354b;
     margin-bottom: 5px;
     font-weight: 600;
@@ -114,7 +121,7 @@ body{
     outline: solid 2px #365b6d;
 }
 #logo{
-    margin: 0 1rem 0 8rem;
+    margin: 0 1em 0 8em;
     color: #365b6d;
     width: 70px;
     height: 70px;
@@ -127,25 +134,25 @@ body{
     justify-content:space-between;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
     margin-top: -2px;
 }
 .basketWidth{
-    width: 3rem;
+    width: 3em;
 }
 .buttonIMG {
-    max-width: 1.5rem;
-    max-height: 1.5rem;
+    max-width: 1.5em;
+    max-height: 1.5em;
 }
 .button{
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
     max-width: 65px;
 }
 .navButtonMargin{
-    margin-right: 1rem;
+    margin-right: 1em;
 }
 #logReg{
-    margin: 0 1rem;
+    margin: 0 1em;
 }
 #logRegPopup{
     max-width: 250px;
@@ -159,23 +166,23 @@ body{
     top:65px;
 }
 #noAccTxt{
-    font-size:0.75rem;
+    font-size:0.75em;
     color:gray;
     margin: 5px 0;
 }
 .marginForm{
-    margin: 0.5rem;
+    margin: 0.5em;
 }
 .search{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    height: 2rem;
-    border-radius: 0.35rem;
+    height: 2em;
+    border-radius: 0.35em;
 }
 #searchBar{ 
     width: 35%;
 }
 #searchButton{
-    padding: 0.3rem 0.75rem;
+    padding: 0.3em 0.75em;
     background-color:#365b6d;
     margin-left: -15px;
 }
@@ -189,54 +196,55 @@ body{
 }
 #filterBox{
     width:170px;
-    align-items: flex-start !important;
+    align-self: flex-start !important;
 }
 .yAxisSpaceBetween{
     justify-content: space-between;
 }
 .itemBar{
-    padding: 0.1rem;
+    padding: 0.1em;
     align-content: space-between;
 }
 .itemBar:hover{
-    padding: 0.1rem;
+    padding: 0.1em;
     background-image:
         linear-gradient(to bottom, white 0%, white 100%),
         linear-gradient(to bottom, #365b6d 0%, #365b6d 100%);
     background-clip: content-box, padding-box;
+    border-color: #365b6d;
 }
 .itemName{
-    font-size: 1.2rem;
-    padding: 0.6rem 0 0 0.75rem;
+    font-size: 1.2em;
+    padding: 0.6em 0 0 0.75em;
 }
 .radiusLowerCorners{
     border-radius: 0 0 7px 7px;
 }
 .itemInfo{
-    font-size: 0.85rem;
+    font-size: 0.85em;
     color: rgb(97, 95, 95);
-    padding-left: 0.75rem;
+    padding-left: 0.75em;
 }
 .itemLevel{
-    font-size: 0.65rem;
+    font-size: 0.65em;
     color: rgb(153, 153, 153);
-    padding: 0.1rem 0 0.6rem 0.75rem;
+    padding: 0.1em 0 0.6em 0.75em;
 }
 #filterList{
     align-self: flex-start;
     width: 150px;
-    padding: 0.35rem;
+    padding: 0.35em;
 }
 .filterBar{
     justify-content: flex-start;
-    padding: 0 0.25rem 0.25rem 0.25rem;
+    padding: 0 0.25em 0.25em 0.25em;
 }
 .margin05Bottom{
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 .contentTitle{
-    padding: 1.5rem;
-    font-size: 2rem;
+    padding: 1.5em;
+    font-size: 2em;
     border-bottom: solid 1px #0c354b;
 }
 .border1pxRadius{
@@ -246,26 +254,27 @@ body{
 .checkbox{
     height: 15px;
     width: 15px;
-    /* transition: box-shadow .3s; */
-    /* background: white; */
+    transition: box-shadow .3s;
+    background: white;
     cursor: pointer;
-    /* appearance: none; -webkit-appearance: none; */
+    appearance: none; -webkit-appearance: none;
     border-radius: 3px !important;
 }
-/* .checkbox:checked{
+.checkbox:checked{
     box-shadow: inset 0 0 0 20px #0c354b;
-} */
+}
 .filterName{
-    padding-left: 0.25rem;
+    padding-left: 0.5em;
+    margin: -5px;
 }
 .filterInfo{
-    font-size: 1.1rem;
-    padding: 0.4rem 0;
+    font-size: 1.1em;
+    padding: 0.4em 0;
 }
 .itemIMG{
     border: solid 2px gray;
-    width:9rem;
-    margin-right: 2.5rem;
+    width:9em;
+    margin-right: 2.5em;
     position: relative;
     transform: scale(1);
     transition: transform .4s;
@@ -276,14 +285,14 @@ body{
 }
 #contentGrid{
     width: 75%;
-    gap: 2rem;
+    gap: 1.5em;
     margin: 2rem 0;
 }
 .toLeft{
     justify-content: flex-start;
 }
 .margin2{
-    margin: 2rem;
+    margin: 2em;
 }
 .whiteBackground{
     background-color: white;
@@ -304,7 +313,7 @@ body{
     width: 63%;
 }
 .marginNewsletter{
-    margin:0.35rem;
+    margin:0.35em;
 }
 #submitNews{
     font-weight: 500;
@@ -319,13 +328,13 @@ body{
     padding: 0.2em 0.4em;
 }
 #credits{
-    padding: 0.2rem;
+    padding: 0.2em;
     background-color: #0c354b;
 }
 #author{
     text-decoration: none;
-    margin: 0.25rem;
-    font-size: 0.5rem;
+    margin: 0.25em;
+    font-size: 0.5em;
     color: white;
 }
 #author:hover{
@@ -334,5 +343,47 @@ body{
 #name{
     border: solid 1px white;
     border-radius: 4px;
-    padding: 0.2rem;
+    padding: 0.2em;
+}
+.borderTop{
+    border-top: solid 1px #0c354b;
+}
+.borderBottom{
+    border-bottom: solid 1px #0c354b;
+}
+.wordInput{
+    width: 15ch;
+    margin: 0.25em;
+}
+.showButton{
+    background-color: rgb(252, 111, 111);
+    border: none;
+    border-radius: 6px;
+    margin-left: 0.5em;
+}
+.checkButton{
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(152, 255, 126);
+}
+.transition1sBackgroundColor{
+    transition: background-color 0.5s;
+}
+.transition1sVisibility{
+    transition: opacity 1s;
+}
+.goodAnswer{
+    background-color: rgb(152, 255, 126);
+}
+.wrongAnswer{
+    background-color: rgb(252, 111, 111);
+}
+.height{
+    height: 2em;
+}
+.hidden{
+    opacity: 0;
+}
+.answerTxtPadding{
+    padding-right: 0.25em;
 }
