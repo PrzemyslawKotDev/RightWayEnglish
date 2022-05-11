@@ -2,11 +2,12 @@
 English learning platform in development
 currenty working wersion: https://rightwayenglish.herokuapp.com/
 ------------------------------------------------------------------------------------------
-- content shows after you click on logo;
+- content shows after you click on logo; --> no longer needed, it is main content now,
 - click on category;
 - filter works;
 - in category click on exercise type;
-- check button checks if answer is good, show button shows answers;
+- check button checks if answer is good, show button shows answers;  --> fixed for multiple inputs,
+- calculates overall score;
 - Log In hover efect;
 - Register loads form - (double pasword check);
 - button on footer bottom opens my LinkedIn;
