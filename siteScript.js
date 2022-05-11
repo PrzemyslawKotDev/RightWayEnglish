@@ -599,9 +599,30 @@ let content = document.querySelector('#content');
     let exercisesToDo = document.createElement('div');
         exercisesToDo.classList.add('boxFont');
         exercisesToDo.classList.add('width80');
-        exercisesToDo.classList.add('borderTop');
+
+    let tips = document.createElement('div');
+        tips.classList.add('boxFont');
+        tips.classList.add('width');
+        tips.classList.add('font');
+        tips.classList.add('padding');
+        tips.classList.add('textCenter');
+        tips.classList.add('fontSize125');
+        tips.innerText = `Show button gives u the answers. Check button checks if your answer is correct. Get score button works properly if u check your answers.`;
+
+    let goodLuck = document.createElement('div');
+        goodLuck.classList.add('boxFont');
+        goodLuck.classList.add('width');
+        goodLuck.classList.add('font');
+        goodLuck.classList.add('padding05Bottom');
+        goodLuck.classList.add('textCenter');
+        goodLuck.classList.add('borderBottom');
+        goodLuck.classList.add('fontSize150');
+        goodLuck.classList.add('fontWeight500');
+        goodLuck.innerText = `Good luck!`;
 
 content.append(exercisesToDo);
+    exercisesToDo.append(tips);
+    exercisesToDo.append(goodLuck);
 
         data.map((item, key) => {
 
@@ -609,6 +630,7 @@ content.append(exercisesToDo);
                 exercise.classList.add('font');
                 exercise.classList.add('width');
                 exercise.classList.add('padding');
+                exercise.classList.add('borderBox');
                 exercise.classList.add('borderBottom');
                 exercise.setAttribute('id', key);
 
@@ -636,6 +658,7 @@ content.append(exercisesToDo);
 
                     let correct2 = document.createElement('input');
                         correct2.classList.add('wordInput');
+                        correct2.classList.add('transition1sBackgroundColor');
                         correct2.classList.add('inlineBlock');
                         correct2.setAttribute('id',`correct${key}2`);
 
@@ -645,11 +668,12 @@ content.append(exercisesToDo);
                     exercise.append(correct2);
                     exercise.append(part3);
 
-
-                } if(item.part4){
+                };
+                if(item.part4){
 
                     let correct3 = document.createElement('input');
                         correct3.classList.add('wordInput');
+                        correct3.classList.add('transition1sBackgroundColor');
                         correct3.classList.add('inlineBlock');
                         correct3.setAttribute('id',`correct${key}3`);
 
@@ -665,6 +689,7 @@ content.append(exercisesToDo);
                     answersBar.classList.add('flex');
                     answersBar.classList.add('font');
                     answersBar.classList.add('height');
+                    answersBar.classList.add('itemsToLeft');
                     
                     let answerTxt = document.createElement('span');
                         answerTxt.classList.add('font');
@@ -694,15 +719,40 @@ content.append(exercisesToDo);
                         check.classList.add('checkButton');
                         check.innerText = `Check`;
                         check.onclick = ()=>{
-                            if(document.getElementById(`correct${key}1`).value.toLowerCase() === document.getElementById(`answers${key}`).innerText.toLowerCase()){
+                            const answer1 = document.getElementById(`correct${key}1`).value.toLowerCase();
+                            const answers = document.getElementById(`answers${key}`).innerText.toLowerCase();
+                            if(answer1 !== '' && answers.includes(answer1)){
                                 document.getElementById(`correct${key}1`).classList.remove('wrongAnswer');
                                 document.getElementById(`correct${key}1`).classList.add('goodAnswer');
                             } else {
-                                document.getElementById(`correct${key}1`).classList.remove('goodAnswer');
+                                document.getElementById(`correct${key}1`).classList.remove ('goodAnswer');
                                 document.getElementById(`correct${key}1`).classList.add('wrongAnswer');
-                        }
-                        }
+                            };
+                            if(item.correct2){
 
+                                const answer2 = document.getElementById(`correct${key}2`).value.toLowerCase();
+
+                                if(answer2 !== '' && answers.includes(answer2)){
+                                    document.getElementById(`correct${key}2`).classList.remove('wrongAnswer');
+                                    document.getElementById(`correct${key}2`).classList.add('goodAnswer');
+                                } else {
+                                    document.getElementById(`correct${key}2`).classList.remove ('goodAnswer');
+                                    document.getElementById(`correct${key}2`).classList.add('wrongAnswer');
+                                }
+                            };
+                            if(item.correct3){
+
+                                const answer3 = document.getElementById(`correct${key}3`).value.toLowerCase();
+
+                                if(answer3 !== '' && answers.includes(answer3)){
+                                    document.getElementById(`correct${key}3`).classList.remove('wrongAnswer');
+                                    document.getElementById(`correct${key}3`).classList.add('goodAnswer');
+                                } else {
+                                    document.getElementById(`correct${key}3`).classList.remove ('goodAnswer');
+                                    document.getElementById(`correct${key}3`).classList.add('wrongAnswer');
+                              }
+                            };
+                        }
                         
                     let showCorrectAnswers = document.createElement('button');
                         showCorrectAnswers.classList.add('padding');
@@ -713,7 +763,6 @@ content.append(exercisesToDo);
                             document.getElementById(`answers${key}`).classList.remove('hidden');
                         }
 
-
                     exercise.append(answersBar);
                         answersBar.append(answerTxt);
                         answersBar.append(answers);
@@ -721,12 +770,31 @@ content.append(exercisesToDo);
                         buttons.append(check);
                         buttons.append(showCorrectAnswers);
                 
-
         }
-    )
+    );
+    let score = document.createElement('div');
+        score.classList.add('width');
+        score.classList.add('font');
+        score.classList.add('textCenter');
+        score.classList.add('padding');
+        score.setAttribute('id',`score`);
+        score.innerText = `Good answers: 0 / Wrong answers: 0 / Score: 0%`;
+    
+    let getScore = document.createElement('button');
+        getScore.classList.add('padding');
+        getScore.innerText = `Overall score`;
+        getScore.onclick = ()=>{
+            const goodAnswers = document.querySelectorAll('.goodAnswer').length;
+            const wrongAnswers = document.querySelectorAll('.wrongAnswer').length;
+            const scoreDiv = document.getElementById('score');
+            const scorePercent = (goodAnswers/(goodAnswers+wrongAnswers)*100)
+            scoreDiv.innerText = `Good answers: ${goodAnswers} / Wrong answers: ${wrongAnswers} / Score: ${scorePercent}%`
+        }
+
+content.append(score);
+content.append(getScore);
 
 }
-
 
 function filter(e, filters, categories){
     const id = e.target.id;
@@ -878,8 +946,4 @@ function logIn(e){
         })
 }
 
-
-
-
-
-window.onload = navbar();
+window.onload = navbar(),categoriesOfExercises(categoryData);

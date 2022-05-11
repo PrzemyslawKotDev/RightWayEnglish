@@ -18,6 +18,15 @@ body{
 .font{
     font-family: 'Nunito Sans';
 }
+.fontSize125{
+    font-size: 1.25em;
+}
+.fontSize150{
+    font-size: 1.5em;
+}
+.fontweight{
+    font-weight: 500;
+}
 .marginZero{
     margin: 0;
 }
@@ -198,6 +207,9 @@ body{
     width:170px;
     align-self: flex-start !important;
 }
+.itemsToLeft{
+    justify-content: flex-start !important;
+}
 .yAxisSpaceBetween{
     justify-content: space-between;
 }
@@ -241,6 +253,9 @@ body{
 }
 .margin05Bottom{
     margin-bottom: 0.5em;
+}
+.padding05Bottom{
+    padding-bottom: 0.5em;
 }
 .contentTitle{
     padding: 1.5em;
