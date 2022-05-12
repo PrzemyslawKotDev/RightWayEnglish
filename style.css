@@ -7,10 +7,26 @@ body{
     background-color:rgb(237, 230, 241);
     margin: 0;
 }
+.inlineBlock{
+    display: inline-block;
+}
 .flex{
     display: flex;
+}
+.centerHorizontal{
     align-items: center;
-    justify-content:center;
+}
+.centerVertical{
+    justify-content: center;
+}
+.verticalSpaceBetween{
+    justify-content: space-between;
+}
+.verticalToLeft{
+    justify-content: flex-start !important;
+}
+.horizontalToTop{
+    align-self: flex-start !important;
 }
 .wrap{
     flex-wrap: wrap;
@@ -18,85 +34,133 @@ body{
 .font{
     font-family: 'Nunito Sans';
 }
+.noTextDecor{
+    text-decoration: none;
+}
+.textCenter{
+    text-align: center;
+}
+.fontSize05{
+    font-size: 0.5em;
+}
 .fontSize125{
     font-size: 1.25em;
 }
 .fontSize150{
     font-size: 1.5em;
 }
-.fontweight{
+.fontSize200{
+    font-size: 2em;
+}
+.fontweight500{
     font-weight: 500;
+}
+.fontweight600{
+    font-weight: 600;
+}
+.paddingZero{
+    padding: 0;
+}
+.padding02{
+    padding: 0.2em;
+}
+.padding05{
+    padding: 0.5em;
+}
+.padding05Bottom{
+    padding-bottom: 0.5em;
+}
+.padding1{
+    padding: 1em;
 }
 .marginZero{
     margin: 0;
 }
+.margin025{
+    margin: 0.25em;
+}
+.margin05{
+    margin: 0.5em;
+}
+.margin05Bottom{
+    margin-bottom: 0.5em;
+}
+.margin05TB{
+    margin: 0.5em 0;
+}
+.margin2{
+    margin: 2em;
+}
+.marginRight1{
+    margin-right: 1em;
+}
+.width{
+    width: 100%;
+}
+.width80{
+    width: 80%;
+}
+.width50{
+    width:50%;
+}
+.width8{
+    width: 8em;
+}
+.height2{
+    height: 2em;
+}
+.height25{
+    height: 2.5em;
+}
 .borderBox{
     box-sizing: border-box;
 }
-.textBackgroundLightColor{
-    background-color: #0c354b;
-    height: 2.5em;
+.whiteColor{
     color: white;
+}
+.blackColor{
+    color: black;
+}
+.whiteBackground{
+    background-color: white;
+}
+.darkerBlue{
+    background-color: #0c354b;
+}
+p:hover{
+    cursor: default;
+}
+.cursorPointer:hover{
+    cursor: pointer !important;
+}
+.border1pxDarker{
+    border: solid 1px #0c354b;
+}
+.border1pxLighter{
+    border: solid 1px #365b6d;
+}
+.borderRadius10{
+    border-radius: 10px;
 }
 .contentSquare{
     align-items: flex-end !important;
     height: 225px;
     width: 350px;
-    background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: scale(1);
+    transition: transform .4s;
+}
+.contentSquare:hover{
+	transform: scale(1.1);
     transition: transform .4s;
 }
 .contentIMG{
     height: 120px;
     width: 120px;
 }
-.description{
-    font-size: 0.75em;
-    color:gray;
-}
 .regForm{
     margin: 0.25rem 0.25rem 0.5rem 0.25rem;
-    border: solid 1px #0c354b;
     border-radius: 5px;
-}
-#registerForm{
-    width:50%;
-}
-.regButton{
-    background-color:#0c354b;
-    width: 8em;
-    font-weight: 600;
-    color:white
-}
-.inlineBlock{
-    display: inline-block;
-}
-.boxFont{
-    box-sizing: border-box;
-}
-.margin05TB{
-    margin: 0.5em 0;
-}
-.welcome{
-    font-size: 1.5em;
-}
-.textCenter{
-    text-align: center;
-}
-.width{
-    width: 100%;
-}
-.paddingZero{
-    padding: 0;
-}
-.padding{
-    padding: 0.5em;
-}
-.logOption{
-    margin:0.25em;
-    text-decoration: none;
-    color: black;
 }
 .buttonsBorder{
     border-right: solid 5px #365b6d;
@@ -105,23 +169,9 @@ body{
     border-radius: 0 0 30px 30px;
     margin-right: 8rem;
 }
-#registerButton:hover{
-    cursor: pointer;
-}
-#loginTxt:hover{
-    cursor: default;
-}
 #registerLink{
     font-size: 0.8em;
-    color: #0c354b;
     margin-bottom: 5px;
-    font-weight: 600;
-}
-#registerLink:hover{
-    cursor: pointer;
-}
-#logInLink:hover{
-    cursor: pointer;
 }
 #username:focus{
     outline: solid 2px #365b6d;
@@ -130,57 +180,41 @@ body{
     outline: solid 2px #365b6d;
 }
 #logo{
-    margin: 0 1em 0 8em;
-    color: #365b6d;
+    margin-left: 8em;
     width: 70px;
     height: 70px;
     padding-right: 130px;
 }
-#logo:hover{
-    cursor: pointer;
-}
 #navbar {
     justify-content:space-between;
-    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    margin-bottom: 0.5em;
     margin-top: -2px;
 }
-.basketWidth{
-    width: 3em;
-}
-.buttonIMG {
+.iconSize {
     max-width: 1.5em;
     max-height: 1.5em;
 }
-.button{
+.navbarContentButton{
     padding: 0.5em 0;
     max-width: 65px;
-}
-.navButtonMargin{
-    margin-right: 1em;
 }
 #logReg{
     margin: 0 1em;
 }
 #logRegPopup{
     max-width: 250px;
-    background-color: white;
     border: solid 3px #365b6d;
     border-radius: 8px;
     position: absolute;
     visibility: hidden;
     z-index: 50;
-    padding: 5px;
+    padding: 10px;
     top:65px;
 }
 #noAccTxt{
     font-size:0.75em;
     color:gray;
     margin: 5px 0;
-}
-.marginForm{
-    margin: 0.5em;
 }
 .search{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -200,18 +234,8 @@ body{
     padding-right: 20px;
     padding-left: 5px;
 }
-.width80{
-    width: 80%;
-}
 #filterBox{
     width:170px;
-    align-self: flex-start !important;
-}
-.itemsToLeft{
-    justify-content: flex-start !important;
-}
-.yAxisSpaceBetween{
-    justify-content: space-between;
 }
 .itemBar{
     padding: 0.1em;
@@ -248,32 +272,14 @@ body{
     padding: 0.35em;
 }
 .filterBar{
-    justify-content: flex-start;
     padding: 0 0.25em 0.25em 0.25em;
-}
-.margin05Bottom{
-    margin-bottom: 0.5em;
-}
-.padding05Bottom{
-    padding-bottom: 0.5em;
-}
-.contentTitle{
-    padding: 1.5em;
-    font-size: 2em;
-    border-bottom: solid 1px #0c354b;
-}
-.border1pxRadius{
-    border: solid 1px #0c354b;
-    border-radius: 10px;
 }
 .checkbox{
     height: 15px;
     width: 15px;
     transition: box-shadow .3s;
-    background: white;
-    cursor: pointer;
     appearance: none; -webkit-appearance: none;
-    border-radius: 3px !important;
+    border-radius: 4px !important;
 }
 .checkbox:checked{
     box-shadow: inset 0 0 0 20px #0c354b;
@@ -286,49 +292,24 @@ body{
     font-size: 1.1em;
     padding: 0.4em 0;
 }
-.itemIMG{
-    border: solid 2px gray;
-    width:9em;
-    margin-right: 2.5em;
-    position: relative;
-    transform: scale(1);
-    transition: transform .4s;
-}
-.itemIMG:hover {
-    z-index: 10;
-    transform: scale(1.75);
-}
-#contentGrid{
+#categoryGrid{
     width: 75%;
     gap: 1.5em;
     margin: 2rem 0;
 }
-.toLeft{
-    justify-content: flex-start;
-}
-.margin2{
-    margin: 2em;
-}
-.whiteBackground{
-    background-color: white;
-}
-.contentSquare:hover{
-	transform: scale(1.1);
-    transition: transform .4s;
-}
 #footer{
     border-top: solid 1px #0c354b;
-    justify-content: center;
 }
 #footer>*>*{
     margin:0.5em;
 }
 #footerInfo{
     border-right: solid 1px #0c354b;
-    width: 63%;
+    width: 60%;
 }
 .marginNewsletter{
     margin:0.35em;
+    width: 350px;
 }
 #submitNews{
     font-weight: 500;
@@ -342,23 +323,9 @@ body{
 #saveToNews{
     padding: 0.2em 0.4em;
 }
-#credits{
-    padding: 0.2em;
-    background-color: #0c354b;
-}
-#author{
-    text-decoration: none;
-    margin: 0.25em;
-    font-size: 0.5em;
-    color: white;
-}
-#author:hover{
-    cursor: pointer;
-}
 #name{
     border: solid 1px white;
     border-radius: 4px;
-    padding: 0.2em;
 }
 .borderTop{
     border-top: solid 1px #0c354b;
@@ -368,7 +335,6 @@ body{
 }
 .wordInput{
     width: 15ch;
-    margin: 0.25em;
 }
 .showButton{
     background-color: rgb(252, 111, 111);
@@ -392,9 +358,6 @@ body{
 }
 .wrongAnswer{
     background-color: rgb(252, 111, 111);
-}
-.height{
-    height: 2em;
 }
 .hidden{
     opacity: 0;
