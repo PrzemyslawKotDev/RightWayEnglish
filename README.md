@@ -8,7 +8,7 @@ currenty working wersion: https://rightwayenglish.herokuapp.com/
 - in category click on exercise type;
 - check button checks if answer is good, show button shows answers;  --> fixed for multiple inputs,
 - calculates overall score;
-- Log In hover efect;
+- Log In hover efect in navbar;
 - Register loads form - (double pasword check);
 - button on footer bottom opens my LinkedIn;
 ------------------------------------------------------------------------------------------
