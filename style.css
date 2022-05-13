@@ -85,6 +85,9 @@ body{
 .margin05Bottom{
     margin-bottom: 0.5em;
 }
+.margin1Bottom{
+    margin-bottom: 1em;
+}
 .margin05TB{
     margin: 0.5em 0;
 }
@@ -100,17 +103,26 @@ body{
 .width80{
     width: 80%;
 }
+.width60{
+    width: 60%;
+}
 .width50{
     width:50%;
 }
 .width8{
     width: 8em;
 }
+.width3ch{
+    width: 3ch;
+}
 .height2{
     height: 2em;
 }
 .height25{
     height: 2.5em;
+}
+.height100{
+    height: 100%;
 }
 .borderBox{
     box-sizing: border-box;
@@ -138,6 +150,12 @@ p:hover{
 }
 .border1pxLighter{
     border: solid 1px #365b6d;
+}
+.borderRight1pxDarker{
+    border-right: solid 1px #0c354b;
+}
+.borderLeft1pxDarker{
+    border-left: solid 1px #0c354b;
 }
 .borderRadius10{
     border-radius: 10px;
@@ -303,10 +321,7 @@ p:hover{
 #footer>*>*{
     margin:0.5em;
 }
-#footerInfo{
-    border-right: solid 1px #0c354b;
-    width: 60%;
-}
+
 .marginNewsletter{
     margin:0.35em;
     width: 350px;
@@ -357,11 +372,16 @@ p:hover{
     background-color: rgb(152, 255, 126);
 }
 .wrongAnswer{
-    background-color: rgb(252, 111, 111);
+    background-color: white;
 }
 .hidden{
     opacity: 0;
 }
 .answerTxtPadding{
     padding-right: 0.25em;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

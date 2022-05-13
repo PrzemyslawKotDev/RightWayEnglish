@@ -97,8 +97,5 @@ content.append(container)
             filterLabel.append(filterCheck);
             filterLabel.append(filterName);
 })
-
-
-
 generateExerciseTypes(exercisesInfo)
 };

@@ -30,7 +30,7 @@ data.map(item=>{
             exerciseBar.classList.add('border1pxDarker');
             exerciseBar.classList.add('whiteBackground');
             exerciseBar.setAttribute('name', item.group);
-            exerciseBar.setAttribute('onclick','exercise(exercisesData)');
+            exerciseBar.setAttribute('onclick',`exercise(${item.data})`);
             
             let exerciseName = document.createElement('div');
                 exerciseName.classList.add('itemName');

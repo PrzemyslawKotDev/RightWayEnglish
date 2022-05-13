@@ -38,58 +38,67 @@ const categoryData = [
 ];
 const exercisesInfo = [
     {
-        name: "dane osobowe",
-        type: "zadanie typu ....",
+        name: "Future forms",
+        type: "Uzupełnij luki",
         group: "człowiek",
         level: "A1",
+        data: "futureForms, futureFormsPrecept"
     },
     {
         name: "wygląd",
         type: "zadanie typu ....",
         group: "człowiek",
         level: "A1",
+        data: "exercisesData"
     },
     {
         name: "części ciała",
         type: "zadanie typu ....",
         group: "człowiek",
         level: "A2",
+        data: "exercisesData"
     },
     {
         name: "posiłki",
         type: "zadanie typu ....",
         group: "jedzenie",
         level: "A1",
+        data: "exercisesData"
     },
     {
         name: "owoce",
         type: "zadanie typu ....",
         group: "jedzenie",
         level: "A1",
+        data: "exercisesData"
     },
     {
         name: "rodzaję mięs",
         type: "zadanie typu ....",
         group: "jedzenie",
         level: "A2",
+        data: "exercisesData"
     },
     {
         name: "narządy",
         type: "zadanie typu ....",
         group: "zdrowie",
         level: "A1",
+        data: "exercisesData"
     },
     {
         name: "różne wyrażenia",
         type: "zadanie typu ....",
         group: "zdrowie",
         level: "A2",
+        data: "exercisesData"
     },
     {
         name: "quiz",
         type: "zadanie typu ....",
         group: "zdrowie",
         level: "A2",
+        data: "exercisesData"
     },
 ];
 const exercisesData = [
@@ -184,4 +193,91 @@ const exercisesData = [
         part4: "",
     },
 ];
+const futureFormsPrecept = [
+    ["Be going to", "1. Gdy mówimy o zamiarach / planach na przyszłość.", "2. Przewidywanie przyszłości na podstawie tego co wiemy / widzimy."],
+    ["Present continuous", "3. Pewne plany na niedaleką przyszłość (daty / dni tygodnia / godzina)."],
+    ["Will", "4. Wyrażanie opinii o tym, że coś się wydarzy.", "5. Podejmowanie spontanicznych decyzji.", "6. Proszenie o pomoc.", "7. Składanie obietnic.", "8. Wyrażanie nadziei"]
+]
+const futureForms = [
+    {
+        number: "6",
+        part1: "1. I have some problems with my maths homework",
+        correct1: "Will you help",
+        part2: "me?",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "2",
+        part1: "2. Look at the tree! It",
+        correct1: "is going to fall",
+        part2: ".",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "7",
+        part1: "3. We promise we",
+        correct1: "will never do",
+        part2: "it again.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "3",
+        part1: "4. My sister",
+        correct1: "is getting",
+        part2: "married next Saturday.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "8",
+        part1: "5. I hope she",
+        correct1: "will bring",
+        part2: "some food to the party.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "1",
+        part1: " 6. Tom",
+        correct1: "is going to study",
+        part2: "in the University of Oxford in the future.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "5",
+        part1: "7. It's so hot here. I",
+        correct1: "will open",
+        part2: "the window.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+    {
+        number: "4",
+        part1: "8. I think Martha",
+        correct1: ["won't apologise", "wont apologise", "will not apologise"],
+        part2: "to me.",
+        correct2: "",
+        part3: "",
+        correct3: "",
+        part4: "",
+    },
+]
 const filters = [];

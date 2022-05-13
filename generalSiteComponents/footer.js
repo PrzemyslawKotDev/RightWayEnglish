@@ -3,7 +3,8 @@ const footer = function(){
 
         let footerInfo = document.createElement('div');
             footerInfo.classList.add('font');
-            footerInfo.setAttribute('id', 'footerInfo');
+            footerInfo.classList.add('width60');
+            footerInfo.classList.add('borderRight1pxDarker');
 
             let footerTitle = document.createElement('p');
                 footerTitle.innerText = 'Right Way English Test Site!';
@@ -40,5 +41,4 @@ footerDiv.append(newsletter);
     newsletter.append(newsletterTxt);
     newsletter.append(newsletterInput);
     newsletter.append(newsletterButton);
-
 }
