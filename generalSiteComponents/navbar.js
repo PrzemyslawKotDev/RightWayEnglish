@@ -24,7 +24,7 @@ const navbar = function(){
             let searchInput = document.createElement('input');
                 searchInput.classList.add('search');
                 searchInput.classList.add('borderBox');
-                searchInput.classList.add('width');
+                searchInput.classList.add('width80');
                 searchInput.setAttribute('id','searchInput');
                 searchInput.setAttribute('type','text');
                 searchInput.setAttribute('placeholder','Search for anything');
@@ -46,7 +46,6 @@ const navbar = function(){
             
             let logReg = document.createElement('div');
                 logReg.classList.add('navbarContentButton');
-                logReg.classList.add('link');
                 logReg.classList.add('flex');
                 logReg.classList.add('centerHorizontal');
                 logReg.classList.add('centerVertical');

@@ -11,7 +11,7 @@ const categories = function(data){
             categoryTitle.classList.add('fontSize150');
             categoryTitle.classList.add('width');
             categoryTitle.classList.add('marginZero');
-            categoryTitle.innerText = 'Welcome in RightWay English Test Site!';
+            categoryTitle.innerText = 'Welcome to RightWay English Test Site!';
 
         let categorySubTitle = document.createElement('p');
             categorySubTitle.classList.add('textCenter');

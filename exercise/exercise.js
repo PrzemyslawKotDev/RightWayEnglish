@@ -5,16 +5,7 @@ const exercise = function(data, precept){
     
         let exercisesToDo = document.createElement('div');
             exercisesToDo.classList.add('borderBox');
-            exercisesToDo.classList.add('width80');
-    
-        let tips = document.createElement('div');
-            tips.classList.add('borderBox');
-            tips.classList.add('width');
-            tips.classList.add('font');
-            tips.classList.add('padding05');
-            tips.classList.add('textCenter');
-            tips.classList.add('fontSize125');
-            tips.innerText = `Show button gives u the answers. Check button checks if your answer is correct. Get score button works properly if u check your answers.`;
+            exercisesToDo.setAttribute('id', 'exercisesToDo');
     
         let goodLuck = document.createElement('div');
             goodLuck.classList.add('borderBox');
@@ -28,7 +19,6 @@ const exercise = function(data, precept){
             goodLuck.innerText = `Good luck!`;
             
 content.append(exercisesToDo);
-    exercisesToDo.append(tips);
     exercisesToDo.append(goodLuck);
 
 if(precept){

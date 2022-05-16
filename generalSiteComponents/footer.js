@@ -5,6 +5,7 @@ const footer = function(){
             footerInfo.classList.add('font');
             footerInfo.classList.add('width60');
             footerInfo.classList.add('borderRight1pxDarker');
+            footerInfo.setAttribute('id', 'footerInfo');
 
             let footerTitle = document.createElement('p');
                 footerTitle.innerText = 'Right Way English Test Site!';
@@ -16,7 +17,6 @@ const footer = function(){
             newsletter.classList.add('font');
             newsletter.classList.add('flex');
             newsletter.classList.add('centerHorizontal');
-            newsletter.classList.add('centerVertical');
             newsletter.classList.add('wrap');
             newsletter.classList.add('verticalToLeft');
             newsletter.classList.add('marginNewsletter');
@@ -41,4 +41,5 @@ footerDiv.append(newsletter);
     newsletter.append(newsletterTxt);
     newsletter.append(newsletterInput);
     newsletter.append(newsletterButton);
+
 }

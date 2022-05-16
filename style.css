@@ -1,8 +1,5 @@
 /* style dla html wyłączają reskalowanie przy pasku przewijania strony */
-html {
-    overflow-x: hidden;
-    margin-right: calc(-1 * (100vw - 100%));
-}
+
 body{
     background-color:rgb(237, 230, 241);
     margin: 0;
@@ -160,18 +157,7 @@ p:hover{
 .borderRadius10{
     border-radius: 10px;
 }
-.contentSquare{
-    align-items: flex-end !important;
-    height: 225px;
-    width: 350px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transform: scale(1);
-    transition: transform .4s;
-}
-.contentSquare:hover{
-	transform: scale(1.1);
-    transition: transform .4s;
-}
+
 .contentIMG{
     height: 120px;
     width: 120px;
@@ -180,13 +166,7 @@ p:hover{
     margin: 0.25rem 0.25rem 0.5rem 0.25rem;
     border-radius: 5px;
 }
-.buttonsBorder{
-    border-right: solid 5px #365b6d;
-    border-left: solid 5px #365b6d;
-    border-bottom: solid 5px #365b6d;
-    border-radius: 0 0 30px 30px;
-    margin-right: 8rem;
-}
+
 #registerLink{
     font-size: 0.8em;
     margin-bottom: 5px;
@@ -197,12 +177,7 @@ p:hover{
 #password:focus{
     outline: solid 2px #365b6d;
 }
-#logo{
-    margin-left: 8em;
-    width: 70px;
-    height: 70px;
-    padding-right: 130px;
-}
+
 #navbar {
     justify-content:space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -214,7 +189,7 @@ p:hover{
 }
 .navbarContentButton{
     padding: 0.5em 0;
-    max-width: 65px;
+    width: 62px;
 }
 #logReg{
     margin: 0 1em;
@@ -310,18 +285,13 @@ p:hover{
     font-size: 1.1em;
     padding: 0.4em 0;
 }
-#categoryGrid{
-    width: 75%;
-    gap: 1.5em;
-    margin: 2rem 0;
-}
+
 #footer{
     border-top: solid 1px #0c354b;
 }
 #footer>*>*{
     margin:0.5em;
 }
-
 .marginNewsletter{
     margin:0.35em;
     width: 350px;
@@ -384,4 +354,166 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+.contentSquare:hover{
+    transform: scale(1.05);
+    transition: transform .3s;
+}
+
+@media only screen and (min-width:1600px) {
+    #categoryGrid{
+        width: 75%;
+        gap: 1.5em;
+        margin: 2rem 0;
+    }
+    .contentSquare{
+        align-items: flex-end !important;
+        height: 225px;
+        width: 350px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1);
+        transition: transform .4s;
+    }
+    #exercisesBox{
+        width: 80%;
+    }
+    #logo{
+        margin-left: 8em;
+        width: 70px;
+        height: 70px;
+        padding-right: 130px;
+    }
+    .buttonsBorder{
+        border-right: solid 5px #365b6d;
+        border-left: solid 5px #365b6d;
+        border-bottom: solid 5px #365b6d;
+        border-radius: 0 0 30px 30px;
+        margin-right: 8em;
+    }
+    #container{
+        width: 80%;
+    }
+    #exercisesToDo{
+        width: 80%;
+    }
+    html {
+        overflow-x: hidden;
+        margin-right: calc(-1 * (100vw - 100%));
+    }
+}
+@media only screen and (min-width:1280px) and (max-width:1599px) {
+    #categoryGrid{
+        width: 80%;
+        gap: 0.5em;
+        margin: 2em 0;
+    }
+    .contentSquare{
+        align-items: flex-end !important;
+        height: 225px;
+        width: 300px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1);
+        transition: transform .4s;
+    }
+    #exercisesBox{
+        width: 75%;
+    }
+    #logo{
+        margin-left: 8em;
+        width: 70px;
+        height: 70px;
+        padding-right: 130px;
+    }
+    .buttonsBorder{
+        border-right: solid 5px #365b6d;
+        border-left: solid 5px #365b6d;
+        border-bottom: solid 5px #365b6d;
+        border-radius: 0 0 30px 30px;
+        margin-right: 8em;
+    }
+    #container{
+        width: 80%;
+    }
+    #exercisesToDo{
+        width: 80%;
+    }
+    html {
+        overflow-x: hidden;
+        margin-right: calc(-1 * (100vw - 100%));
+    }
+}
+@media only screen and (min-width:750px) and (max-width:1279px) {
+    #categoryGrid{
+        width: 100%;
+        gap: 0.5em;
+        margin: 1em 0;
+    }
+    .contentSquare{
+        align-items: flex-end !important;
+        height: 225px;
+        width: 300px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1);
+        transition: transform .4s;
+    }
+    #exercisesBox{
+        width: 65%;
+    }
+    #logo{
+        margin-left: 2em;
+        width: 70px;
+        height: 70px;
+        padding-right: 130px;
+    }
+    .buttonsBorder{
+        border-right: solid 5px #365b6d;
+        border-left: solid 5px #365b6d;
+        border-bottom: solid 5px #365b6d;
+        border-radius: 0 0 30px 30px;
+        margin: 0 2em 0 0.25em;
+    }
+    #container{
+        width: 90%;
+    }
+    #exercisesToDo{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:749px) {
+    #categoryGrid{
+        width: 100%;
+        gap: 0.5em;
+        margin: 0.5em 0;
+    }
+    .contentSquare{
+        align-items: flex-end !important;
+        height: 200px;
+        width: 300px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1);
+        transition: transform .4s;
+    }
+    #exercisesBox{
+        width: 60%;
+    }
+    #logo{
+        margin-left: 1em;
+        width: 70px;
+        height: 70px;
+        padding-right: 130px;
+    }
+    .buttonsBorder{
+        border-right: solid 5px #365b6d;
+        border-left: solid 5px #365b6d;
+        border-bottom: solid 5px #365b6d;
+        border-radius: 0 0 30px 30px;
+        margin: 0 1em 0 0.25em;
+
+    }
+    #container{
+        width: 100%;
+    }
+    #exercisesToDo{
+        width: 100%;
+    }
 }

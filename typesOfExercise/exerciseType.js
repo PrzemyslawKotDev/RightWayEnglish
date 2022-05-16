@@ -10,8 +10,9 @@ let content = document.querySelector('#content');
 
 let container = document.createElement('div');
     container.classList.add('flex');
-    container.classList.add('width80');
     container.classList.add('verticalSpaceBetween');
+    container.setAttribute('id','container');
+
 
     let filterBox = document.createElement('div');
         filterBox.classList.add('flex');
@@ -37,7 +38,6 @@ let container = document.createElement('div');
         exercisesBox.classList.add('centerHorizontal');
         exercisesBox.classList.add('centerVertical');
         exercisesBox.classList.add('wrap');
-        exercisesBox.classList.add('width80');
         exercisesBox.setAttribute('id', 'exercisesBox');
 
     let exercisesTitle = document.createElement('div');
