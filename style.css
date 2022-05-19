@@ -160,8 +160,8 @@ p:hover{
 .borderLeft1pxDarker{
     border-left: solid 1px #0c354b;
 }
-.border3pxLighter{
-    border: solid 3px #365b6d;
+.border5pxLighter{
+    border: solid 5px #365b6d;
 }
 .borderBottomWhite{
     border-bottom: solid 2px white;

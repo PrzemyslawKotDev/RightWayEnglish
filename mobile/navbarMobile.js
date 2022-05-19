@@ -62,7 +62,7 @@ const navbarMobile = function(){
                 menu.classList.add('invisible');
                 menu.classList.add('width60');
                 menu.classList.add('whiteBackground');
-                menu.classList.add('border3pxLighter');
+                menu.classList.add('border5pxLighter');
                 menu.classList.add('borderRadius10');
                 menu.classList.add('padding05');
                 menu.classList.add('font');
