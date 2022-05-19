@@ -6,7 +6,7 @@ currenty working wersion: https://rightwayenglish.herokuapp.com/
 - click on category;
 - filter works;
 - in category click on exercise type;
-- check button checks if answer is good, show button shows answers;  --> fixed for multiple inputs; --> automatic check good answer;
+- check button checks if answer is good, show button shows answers;  --> fixed for multiple inputs; --> automatic check if answer is good;
 - calculates overall score;
 - Log In hover efect in navbar;
 - Register loads form - (double pasword check);
