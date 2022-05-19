@@ -1,5 +1,6 @@
 const footer = function(){
     let footerDiv = document.getElementById('footer');
+        footerDiv.classList.add('whiteBackground');
 
         let footerInfo = document.createElement('div');
             footerInfo.classList.add('font');
@@ -20,6 +21,7 @@ const footer = function(){
             newsletter.classList.add('wrap');
             newsletter.classList.add('verticalToLeft');
             newsletter.classList.add('marginNewsletter');
+            newsletter.setAttribute('id', 'newsletter');
 
             let newsletterTxt = document.createElement('p');
                 newsletterTxt.innerText = 'Zapisz się do naszego newslettera';

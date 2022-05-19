@@ -1,6 +1,9 @@
 const registerForm = function(){ 
+
+    const menu = document.getElementById("menu");
+          menu.classList.add('invisible');
+
     let content = document.querySelector('#content');
-        content.classList.remove('verticalSpaceBetween');
         content.innerText = ' ';
 
     let registerTxt = document.createElement('h1');
@@ -84,6 +87,7 @@ const registerForm = function(){
             registerButton.classList.add('width8');
             registerButton.classList.add('border1pxDarker');
             registerButton.classList.add('regForm');
+            registerButton.classList.add('whiteColor');
             registerButton.setAttribute('id','registerButton');
             registerButton.setAttribute('type','submit');
             registerButton.setAttribute('value','Create account');

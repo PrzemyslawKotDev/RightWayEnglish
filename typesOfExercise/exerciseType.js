@@ -5,6 +5,9 @@ const exerciseTypes = function(event, data){
     
     const uniqueCategories = [...new Set(duplicatedCategories)]
 
+    const menu = document.getElementById("menu");
+          menu.classList.add('invisible');
+
 let content = document.querySelector('#content');
     content.innerText = '';    
 
@@ -12,7 +15,6 @@ let container = document.createElement('div');
     container.classList.add('flex');
     container.classList.add('verticalSpaceBetween');
     container.setAttribute('id','container');
-
 
     let filterBox = document.createElement('div');
         filterBox.classList.add('flex');

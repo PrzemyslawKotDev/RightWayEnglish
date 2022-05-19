@@ -112,11 +112,17 @@ body{
 .width3ch{
     width: 3ch;
 }
+.height80px{
+    height: 80px;
+}
 .height2{
     height: 2em;
 }
 .height25{
     height: 2.5em;
+}
+.height33{
+    height: 33%;
 }
 .height100{
     height: 100%;
@@ -154,10 +160,24 @@ p:hover{
 .borderLeft1pxDarker{
     border-left: solid 1px #0c354b;
 }
+.border3pxLighter{
+    border: solid 3px #365b6d;
+}
+.borderBottomWhite{
+    border-bottom: solid 2px white;
+}
+.borderBottom1pxLighter{
+    border-bottom: solid 1px #365b6d;
+}
 .borderRadius10{
     border-radius: 10px;
 }
-
+.positionAbsolute{
+    position: absolute;
+}
+.invisible{
+    visibility:hidden;
+}
 .contentIMG{
     height: 120px;
     width: 120px;
@@ -166,7 +186,10 @@ p:hover{
     margin: 0.25rem 0.25rem 0.5rem 0.25rem;
     border-radius: 5px;
 }
-
+.menuButton{
+    height: 40px;
+    width: 40px;
+}
 #registerLink{
     font-size: 0.8em;
     margin-bottom: 5px;
@@ -177,9 +200,14 @@ p:hover{
 #password:focus{
     outline: solid 2px #365b6d;
 }
-
-#navbar {
+.spaceBetween{
     justify-content:space-between;
+}
+.spaceAround{
+    justify-content:space-around;
+}
+#navBarStandart {
+    visibility: visible;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     margin-top: -2px;
 }
@@ -196,13 +224,22 @@ p:hover{
 }
 #logRegPopup{
     max-width: 250px;
-    border: solid 3px #365b6d;
-    border-radius: 8px;
     position: absolute;
     visibility: hidden;
     z-index: 50;
     padding: 10px;
     top:65px;
+}
+#menu{
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    top: 0; 
+    margin: auto; 
+    width: 230px;
+    height: 230px;
+    top: 78px;
+    z-index: 50;
 }
 #noAccTxt{
     font-size:0.75em;
@@ -285,7 +322,13 @@ p:hover{
     font-size: 1.1em;
     padding: 0.4em 0;
 }
-
+.line0{
+    height: 1px;
+}
+.line{
+    width: 24px;
+    margin: 8px;
+}
 #footer{
     border-top: solid 1px #0c354b;
 }
@@ -359,7 +402,17 @@ input[type=number]::-webkit-outer-spin-button {
     transform: scale(1.05);
     transition: transform .3s;
 }
-
+#navBarMobile {
+    visibility: hidden;
+}
+.bigLogo{
+    padding-right: 130px;
+}
+#logo{
+    margin-left: 8em;
+    width: 70px;
+    height: 70px;
+}
 @media only screen and (min-width:1600px) {
     #categoryGrid{
         width: 75%;
@@ -377,12 +430,7 @@ input[type=number]::-webkit-outer-spin-button {
     #exercisesBox{
         width: 80%;
     }
-    #logo{
-        margin-left: 8em;
-        width: 70px;
-        height: 70px;
-        padding-right: 130px;
-    }
+    
     .buttonsBorder{
         border-right: solid 5px #365b6d;
         border-left: solid 5px #365b6d;
@@ -417,12 +465,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     #exercisesBox{
         width: 75%;
-    }
-    #logo{
-        margin-left: 8em;
-        width: 70px;
-        height: 70px;
-        padding-right: 130px;
     }
     .buttonsBorder{
         border-right: solid 5px #365b6d;
@@ -461,9 +503,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     #logo{
         margin-left: 2em;
-        width: 70px;
-        height: 70px;
-        padding-right: 130px;
     }
     .buttonsBorder{
         border-right: solid 5px #365b6d;
@@ -480,9 +519,24 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 @media only screen and (max-width:749px) {
+    html{
+        width: 100%;
+    }
+    #footerInfo{
+        display: none;
+    }
+    #newsletter{
+        width: 100%;
+    }
+    #navBarStandart {
+        visibility: hidden;
+    }
+    #navBarMobile {
+        visibility: visible;
+    }
     #categoryGrid{
         width: 100%;
-        gap: 0.5em;
+        gap: 1em;
         margin: 0.5em 0;
     }
     .contentSquare{
@@ -497,10 +551,7 @@ input[type=number]::-webkit-outer-spin-button {
         width: 60%;
     }
     #logo{
-        margin-left: 1em;
-        width: 70px;
-        height: 70px;
-        padding-right: 130px;
+        margin: 0;
     }
     .buttonsBorder{
         border-right: solid 5px #365b6d;
@@ -508,12 +559,23 @@ input[type=number]::-webkit-outer-spin-button {
         border-bottom: solid 5px #365b6d;
         border-radius: 0 0 30px 30px;
         margin: 0 1em 0 0.25em;
-
     }
     #container{
         width: 100%;
     }
     #exercisesToDo{
+        width: 100%;
+    }
+    #registerForm{
+        width: 100%;
+    }
+    #container{
+        flex-wrap: wrap;
+    }
+    #filterBox{
+        width: 100%;
+    }
+    #filterList{
         width: 100%;
     }
 }

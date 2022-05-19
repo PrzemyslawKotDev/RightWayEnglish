@@ -1,2 +1,2 @@
 
-window.onload = navbar(),categories(categoryData),footer();
+window.onload = navbar(), navbarMobile(),categories(categoryData),footer();

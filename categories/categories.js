@@ -1,9 +1,10 @@
 const categories = function(data){
+
+    const menu = document.getElementById("menu");
+          menu.classList.add('invisible');
     
-    let contentDiv = document.querySelector('#content');
-        contentDiv.classList.remove('verticalSpaceBetween');
-        contentDiv.classList.remove('width');
-        contentDiv.innerText = ' ';
+    let content = document.querySelector('#content');
+        content.innerText = ' ';
 
         let categoryTitle = document.createElement('p');
             categoryTitle.classList.add('textCenter');

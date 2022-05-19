@@ -1,15 +1,20 @@
 const navbar = function(){
     let navBar = document.querySelector('#navBar');
-        navBar.classList.add('width');
-        navBar.classList.add('whiteBackground');
-        navBar.classList.add('borderBox');
-        navBar.classList.add('flex');
-        navBar.classList.add('centerHorizontal');
-        navBar.classList.add('centerVertical');
-        navBar.setAttribute('id','navbar');
+
+    let navBarStandart = document.createElement('div');
+        navBarStandart.classList.add('width');
+        navBarStandart.classList.add('whiteBackground');
+        navBarStandart.classList.add('borderBox');
+        navBarStandart.classList.add('flex');
+        navBarStandart.classList.add('spaceBetween');
+        navBarStandart.classList.add('centerHorizontal');
+        navBarStandart.classList.add('positionAbsolute');
+        navBarStandart.classList.add('margin05Bottom');
+        navBarStandart.setAttribute('id','navBarStandart');
         
         let logo = document.createElement('img');
             logo.classList.add('cursorPointer');
+            logo.classList.add('bigLogo');
             logo.setAttribute('id','logo');
             logo.setAttribute('onclick','categories(categoryData)');
             logo.setAttribute('src','https://i.ibb.co/PwmSG2q/rwe-logo.jpg');
@@ -73,6 +78,8 @@ const navbar = function(){
                     logRegPopup.classList.add('centerVertical');
                     logRegPopup.classList.add('wrap');
                     logRegPopup.classList.add('whiteBackground');
+                    logRegPopup.classList.add('border3pxLighter');
+                    logRegPopup.classList.add('borderRadius10');
                     logRegPopup.setAttribute('id','logRegPopup');
                     logRegPopup.setAttribute('onmouseover','showLogReg()');
                     logRegPopup.setAttribute('onmouseout','hideLogReg()');
@@ -197,11 +204,12 @@ const navbar = function(){
                     // basketTxt.classList.add('centerVertical');
             //         basketTxt.innerText = 'Basket';
 
-    navBar.append(logo);
-    navBar.append(searchBar);
+navBar.append(navBarStandart);
+    navBarStandart.append(logo);
+    navBarStandart.append(searchBar);
         searchBar.append(searchInput);
         searchBar.append(searchButton);
-    navBar.append(navbarMenu);
+    navBarStandart.append(navbarMenu);
         navbarMenu.append(logReg);
             logReg.append(loginIcon);
             logReg.append(loginTxt);
