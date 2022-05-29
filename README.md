@@ -11,7 +11,7 @@ currenty working wersion: https://rightwayenglish.herokuapp.com/
 - Log In hover efect in navbar;
 - Register loads form - (double pasword check);
 - button on footer bottom opens my LinkedIn;
-- RWD (mobiles in dev);
+- RWD (not for mobiles);
 ------------------------------------------------------------------------------------------
 - search not implemented;
 - profile not implemented;

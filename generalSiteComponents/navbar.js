@@ -55,7 +55,7 @@ const navbar = function(){
                 logReg.classList.add('centerHorizontal');
                 logReg.classList.add('centerVertical');
                 logReg.classList.add('wrap');
-                logReg.setAttribute('id','logReg');
+                logReg.classList.add('logReg');
                 logReg.setAttribute('onmouseover','showLogReg()');
                 logReg.setAttribute('onmouseout','hideLogReg()');
             
@@ -74,6 +74,8 @@ const navbar = function(){
 
                 let logRegPopup = document.createElement('div');
                     logRegPopup.classList.add('flex');
+                    logRegPopup.classList.add('hidden');
+                    logRegPopup.classList.add('transition05s');
                     logRegPopup.classList.add('centerHorizontal');
                     logRegPopup.classList.add('centerVertical');
                     logRegPopup.classList.add('wrap');
@@ -159,7 +161,7 @@ const navbar = function(){
 
             let userAccount = document.createElement('div');
                 userAccount.classList.add('navbarContentButton');
-                userAccount.classList.add('marginRight1');
+                userAccount.classList.add('marginRightProfile');
                 userAccount.classList.add('cursorPointer');
                 userAccount.classList.add('flex');
                 userAccount.classList.add('centerHorizontal');
@@ -233,9 +235,15 @@ navBar.append(navBarStandart);
 function showLogReg() {
     const logRegPopup = document.getElementById("logRegPopup");
           logRegPopup.style.visibility = "visible";
+          logRegPopup.classList.remove('hidden');
+
 };
 
 function hideLogReg() {
     const logRegPopup = document.getElementById("logRegPopup");
-          logRegPopup.style.visibility = "hidden";
+          logRegPopup.classList.add('hidden');
+          setTimeout(()=>{
+            logRegPopup.style.visibility = "hidden";
+            }, 500)
+          
 };

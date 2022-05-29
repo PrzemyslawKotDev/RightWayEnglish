@@ -1,9 +1,12 @@
 function logInForm(){
     
-    const menu = document.getElementById("menu");
-          menu.classList.add('invisible');
-
 let content = document.querySelector('#content');
+    content.classList.toggle('hidden');
+
+    hideMenu()
+
+setTimeout(()=>{
+    
     content.innerText = ' ';
 
     let loginForm = document.createElement('form');
@@ -87,5 +90,10 @@ content.append(loginForm);
         loginForm.append(logInButton);
         loginForm.append(noAccTxt);
         loginForm.append(registerLink);
+
+    content.classList.toggle('hidden');
+
+    }, 500)
+
 
 }

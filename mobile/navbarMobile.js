@@ -27,7 +27,7 @@ const navbarMobile = function(){
             menuButton.classList.add('darkerBlue');
             menuButton.classList.add('whiteColor');
             menuButton.classList.add('wrap');
-            menuButton.setAttribute('onclick','toggleMenu()');
+            menuButton.setAttribute('onclick','showMenu()');
         
         let line0 = document.createElement('div');
             line0.classList.add('width');
@@ -52,7 +52,26 @@ const navbarMobile = function(){
             line3.classList.add('width');
             line3.classList.add('borderBottomWhite');
 
+            let siteShadow = document.createElement('div');
+                siteShadow.classList.add('flex');
+                siteShadow.classList.add('centerHorizontal');
+                siteShadow.classList.add('centerVertical');
+                siteShadow.classList.add('positionAbsolute');
+                siteShadow.classList.add('invisible');
+                siteShadow.classList.add('darkerBlue');
+                siteShadow.classList.add('opacity07');
+                siteShadow.classList.add('invisible');
+                siteShadow.classList.add('width');
+                siteShadow.classList.add('zIndex40');
+                siteShadow.classList.add('hidden');
+                siteShadow.classList.add('transition05s');
+                siteShadow.classList.add('noClick');
+                siteShadow.setAttribute('id','siteShadow');
+                siteShadow.setAttribute('onclick','hideMenu()');
+
             let menu = document.createElement('div');
+                menu.classList.add('transition05s');
+                menu.classList.add('hidden');
                 menu.classList.add('flex');
                 menu.classList.add('wrap');
                 menu.classList.add('centerHorizontal');
@@ -65,6 +84,7 @@ const navbarMobile = function(){
                 menu.classList.add('border5pxLighter');
                 menu.classList.add('borderRadius10');
                 menu.classList.add('padding05');
+                menu.classList.add('zIndex50');
                 menu.classList.add('font');
                 menu.setAttribute('id','menu');
                 
@@ -109,6 +129,7 @@ navBar.append(navBarMobile);
         menuButton.append(line1);
         menuButton.append(line2);
         menuButton.append(line3);
+navBar.append(siteShadow);
 navBar.append(menu);
     menu.append(logIn);
     menu.append(profile);
@@ -116,7 +137,26 @@ navBar.append(menu);
 
 }
 
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-          menu.classList.toggle("invisible");
-};
+document.body.scrollHeight
+
+function showMenu() {
+    const menu = document.getElementById('menu');
+    const siteShadow = document.getElementById('siteShadow');
+          siteShadow.style.height = `${document.body.scrollHeight}px`;
+
+    siteShadow.classList.remove('invisible');
+    siteShadow.classList.toggle('noClick');
+    siteShadow.classList.toggle('hidden');
+    menu.classList.remove('invisible');
+    menu.classList.toggle('hidden');
+}
+
+function hideMenu(){
+    siteShadow.classList.toggle('hidden');
+    siteShadow.classList.toggle('noClick');
+    menu.classList.toggle('hidden');
+    setTimeout(()=>{
+    siteShadow.classList.add('invisible');
+    menu.classList.add('invisible');
+    }, 500)
+}
